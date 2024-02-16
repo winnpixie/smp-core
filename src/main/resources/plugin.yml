@@ -1,0 +1,34 @@
+name: "wpSMP"
+version: "0.0.14"
+description: "Primarily non-invasive/non-impactful additions"
+author: "Hannah"
+website: "https://winnpixie.xyz/"
+main: "io.github.winnpixie.wpsmp.WPSMP"
+api-version: 1.19
+
+commands:
+  wp-smp:
+    aliases: [ "wpsmp" ]
+    description: "Execute various WPSMP related actions"
+    usage: "/wp-smp [subcommand] ..."
+  hat:
+    description: "Wear your current item on your head"
+    usage: "/hat"
+  ping:
+    aliases: [ "latency" ]
+    description: "Display [user]'s ping in milliseconds"
+    usage: "/ping [user]"
+  seen:
+    description: "Show when <user> last logged in to the server"
+    usage: "/seen <user>"
+  bottle-experience:
+    aliases: [ "bottle-exp", "bottleexp", "bottle-xp", "bottlexp" ]
+    description: "Packs <levels> from you into a drinkable bottle"
+    usage: "/bottle-experience <levels>"
+  sit:
+    description: "Sit on the current stair block you're looking at"
+    usage: "/sit"
+  toggle-log-stripping:
+    aliases: [ "togglelogstripping", "togglels", "tls" ]
+    description: "Toggle the ability to strip logs with an axe"
+    usage: "/toggle-log-stripping"
