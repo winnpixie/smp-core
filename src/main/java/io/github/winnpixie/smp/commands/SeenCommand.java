@@ -1,9 +1,9 @@
-package io.github.winnpixie.wpsmp.commands;
+package io.github.winnpixie.smp.commands;
 
 import io.github.winnpixie.hukkit.Hukkit;
 import io.github.winnpixie.hukkit.commands.BaseCommand;
 import io.github.winnpixie.hukkit.commands.CommandErrors;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.SMPCore;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import org.bukkit.command.Command;
@@ -13,10 +13,10 @@ import org.jetbrains.annotations.NotNull;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class SeenCommand extends BaseCommand<WPSMP> {
+public class SeenCommand extends BaseCommand<SMPCore> {
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss a");
 
-    public SeenCommand(WPSMP plugin) {
+    public SeenCommand(SMPCore plugin) {
         super(plugin, "seen");
     }
 

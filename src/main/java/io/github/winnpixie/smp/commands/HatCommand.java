@@ -1,7 +1,7 @@
-package io.github.winnpixie.wpsmp.commands;
+package io.github.winnpixie.smp.commands;
 
 import io.github.winnpixie.hukkit.commands.impl.PlayerCommand;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.SMPCore;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
@@ -12,12 +12,12 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
-public class HatCommand extends PlayerCommand<WPSMP> {
+public class HatCommand extends PlayerCommand<SMPCore> {
     private final BaseComponent[] noItemMessage = new ComponentBuilder("No item in your main hand.")
             .color(ChatColor.RED)
             .create();
 
-    public HatCommand(WPSMP plugin) {
+    public HatCommand(SMPCore plugin) {
         super(plugin, "hat");
     }
 

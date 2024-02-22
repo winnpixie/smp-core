@@ -1,8 +1,8 @@
-package io.github.winnpixie.wpsmp.listeners;
+package io.github.winnpixie.smp.listeners;
 
 import io.github.winnpixie.hukkit.listeners.EventListener;
-import io.github.winnpixie.wpsmp.Config;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.Config;
+import io.github.winnpixie.smp.SMPCore;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.entity.*;
@@ -11,8 +11,8 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 
-public class EntityActionListener extends EventListener<WPSMP> {
-    public EntityActionListener(WPSMP plugin) {
+public class EntityActionListener extends EventListener<SMPCore> {
+    public EntityActionListener(SMPCore plugin) {
         super(plugin);
     }
 

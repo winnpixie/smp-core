@@ -1,4 +1,4 @@
-package io.github.winnpixie.wpsmp;
+package io.github.winnpixie.smp;
 
 import io.github.winnpixie.hukkit.configs.Link;
 

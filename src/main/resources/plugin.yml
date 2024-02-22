@@ -1,16 +1,16 @@
-name: "wpSMP"
-version: "0.0.14"
+name: "SMPCore"
+version: "0.0.16"
 description: "Primarily non-invasive/non-impactful additions"
 author: "Hannah"
 website: "https://winnpixie.xyz/"
-main: "io.github.winnpixie.wpsmp.WPSMP"
+main: "io.github.winnpixie.smp.SMPCore"
 api-version: 1.19
 
 commands:
-  wp-smp:
-    aliases: [ "wpsmp" ]
-    description: "Execute various WPSMP related actions"
-    usage: "/wp-smp [subcommand] ..."
+  smp-core:
+    aliases: [ "smpcore", "smpc" ]
+    description: "Execute various SMP Core related actions"
+    usage: "/smp-core [subcommand] ..."
   hat:
     description: "Wear your current item on your head"
     usage: "/hat"

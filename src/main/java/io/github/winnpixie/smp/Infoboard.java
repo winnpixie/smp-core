@@ -1,4 +1,4 @@
-package io.github.winnpixie.wpsmp;
+package io.github.winnpixie.smp;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -7,9 +7,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;
 
 public class Infoboard {
-    private final WPSMP plugin;
+    private final SMPCore plugin;
 
-    public Infoboard(WPSMP plugin) {
+    public Infoboard(SMPCore plugin) {
         this.plugin = plugin;
     }
 

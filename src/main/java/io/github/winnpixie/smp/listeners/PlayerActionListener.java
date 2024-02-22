@@ -1,11 +1,11 @@
-package io.github.winnpixie.wpsmp.listeners;
+package io.github.winnpixie.smp.listeners;
 
 import io.github.winnpixie.hukkit.ItemHelper;
 import io.github.winnpixie.hukkit.PDCWrapper;
 import io.github.winnpixie.hukkit.TextHelper;
 import io.github.winnpixie.hukkit.listeners.EventListener;
-import io.github.winnpixie.wpsmp.Config;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.Config;
+import io.github.winnpixie.smp.SMPCore;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
@@ -32,7 +32,7 @@ import org.spigotmc.event.entity.EntityDismountEvent;
 
 import java.util.Set;
 
-public class PlayerActionListener extends EventListener<WPSMP> {
+public class PlayerActionListener extends EventListener<SMPCore> {
     private final Set<Material> axes = Set.of(
             Material.WOODEN_AXE,
             Material.STONE_AXE,
@@ -52,7 +52,7 @@ public class PlayerActionListener extends EventListener<WPSMP> {
             .color(ChatColor.YELLOW)
             .create();
 
-    public PlayerActionListener(WPSMP plugin) {
+    public PlayerActionListener(SMPCore plugin) {
         super(plugin);
     }
 
@@ -137,7 +137,7 @@ public class PlayerActionListener extends EventListener<WPSMP> {
         if (item == null) return false;
         if (!axes.contains(item.getType())) return false;
 
-        PDCWrapper<WPSMP> pdc = new PDCWrapper<>(player.getPersistentDataContainer(), getPlugin());
+        PDCWrapper<SMPCore> pdc = new PDCWrapper<>(player.getPersistentDataContainer(), getPlugin());
         if (pdc.getBoolean("can_strip_logs", true)) return false;
 
         player.spigot().sendMessage(stripReminder);
@@ -235,7 +235,7 @@ public class PlayerActionListener extends EventListener<WPSMP> {
 
     private void respawnPlayer(PlayerDeathEvent event) {
         Player player = event.getEntity();
-        PDCWrapper<WPSMP> pdc = new PDCWrapper<>(player.getPersistentDataContainer(), getPlugin());
+        PDCWrapper<SMPCore> pdc = new PDCWrapper<>(player.getPersistentDataContainer(), getPlugin());
         if (!pdc.getBoolean("auto_respawn", false)) return;
 
         player.spigot().sendMessage(autoRespawnReminder);
@@ -249,7 +249,7 @@ public class PlayerActionListener extends EventListener<WPSMP> {
         ItemHelper.editMetaData(event.getItem(), PotionMeta.class, meta -> {
             if (meta.getBasePotionData().getType() != PotionType.UNCRAFTABLE) return;
 
-            PDCWrapper<WPSMP> pdc = new PDCWrapper<>(meta.getPersistentDataContainer(), getPlugin());
+            PDCWrapper<SMPCore> pdc = new PDCWrapper<>(meta.getPersistentDataContainer(), getPlugin());
             if (!pdc.has("poe_levels")) return;
 
             Player player = event.getPlayer();

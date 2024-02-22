@@ -1,8 +1,8 @@
-package io.github.winnpixie.wpsmp.commands;
+package io.github.winnpixie.smp.commands;
 
 import io.github.winnpixie.hukkit.commands.impl.PlayerCommand;
-import io.github.winnpixie.wpsmp.Config;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.Config;
+import io.github.winnpixie.smp.SMPCore;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
@@ -19,7 +19,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class SitCommand extends PlayerCommand<WPSMP> {
+public class SitCommand extends PlayerCommand<SMPCore> {
     private final BaseComponent[] disabledMessage = new ComponentBuilder("Sitting is currently disabled.")
             .color(ChatColor.RED).create();
     private final BaseComponent[] invalidBlockMessage = new ComponentBuilder("Target block is not a valid stair or slab.")
@@ -27,7 +27,7 @@ public class SitCommand extends PlayerCommand<WPSMP> {
     private final BaseComponent[] sitMessage = new ComponentBuilder("You are now sitting.")
             .color(ChatColor.GREEN).create();
 
-    public SitCommand(WPSMP plugin) {
+    public SitCommand(SMPCore plugin) {
         super(plugin, "sit");
     }
 

@@ -1,4 +1,4 @@
-package io.github.winnpixie.wpsmp.playerdata;
+package io.github.winnpixie.smp.playerdata;
 
 import org.bukkit.entity.Player;
 

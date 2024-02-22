@@ -1,11 +1,11 @@
-package io.github.winnpixie.wpsmp.commands;
+package io.github.winnpixie.smp.commands;
 
 import io.github.winnpixie.hukkit.ItemHelper;
 import io.github.winnpixie.hukkit.MathHelper;
 import io.github.winnpixie.hukkit.PDCWrapper;
 import io.github.winnpixie.hukkit.commands.CommandErrors;
 import io.github.winnpixie.hukkit.commands.impl.PlayerCommand;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.SMPCore;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
@@ -22,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Arrays;
 import java.util.List;
 
-public class BottleExperienceCommand extends PlayerCommand<WPSMP> {
+public class BottleExperienceCommand extends PlayerCommand<SMPCore> {
     private final BaseComponent[] notEnoughExp = new ComponentBuilder("Insufficient experience.")
             .color(ChatColor.RED)
             .create();
@@ -30,7 +30,7 @@ public class BottleExperienceCommand extends PlayerCommand<WPSMP> {
             .color(ChatColor.RED)
             .create();
 
-    public BottleExperienceCommand(WPSMP plugin) {
+    public BottleExperienceCommand(SMPCore plugin) {
         super(plugin, "bottle-experience");
     }
 
@@ -76,7 +76,7 @@ public class BottleExperienceCommand extends PlayerCommand<WPSMP> {
                     "will grant the drinker",
                     "%d level(s) of experience.".formatted(levels)));
 
-            PDCWrapper<WPSMP> pdc = new PDCWrapper<>(meta.getPersistentDataContainer(), getPlugin());
+            PDCWrapper<SMPCore> pdc = new PDCWrapper<>(meta.getPersistentDataContainer(), getPlugin());
             pdc.setInt("poe_levels", levels);
         });
 

@@ -1,9 +1,9 @@
-package io.github.winnpixie.wpsmp.listeners;
+package io.github.winnpixie.smp.listeners;
 
 import io.github.winnpixie.hukkit.TextHelper;
 import io.github.winnpixie.hukkit.listeners.EventListener;
-import io.github.winnpixie.wpsmp.Config;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.Config;
+import io.github.winnpixie.smp.SMPCore;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Keyed;
 import org.bukkit.entity.Player;
@@ -12,8 +12,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-public class ConnectionListener extends EventListener<WPSMP> {
-    public ConnectionListener(WPSMP plugin) {
+public class ConnectionListener extends EventListener<SMPCore> {
+    public ConnectionListener(SMPCore plugin) {
         super(plugin);
     }
 

@@ -1,9 +1,9 @@
-package io.github.winnpixie.wpsmp.commands.admin;
+package io.github.winnpixie.smp.commands.admin;
 
 import io.github.winnpixie.hukkit.commands.BaseCommand;
 import io.github.winnpixie.hukkit.commands.CommandErrors;
 import io.github.winnpixie.hukkit.configs.adapters.BukkitAdapter;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.SMPCore;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
@@ -15,20 +15,20 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Collections;
 import java.util.List;
 
-public class WPSMPCommand extends BaseCommand<WPSMP> {
+public class SMPAdminCommand extends BaseCommand<SMPCore> {
     private final BaseComponent[] reloadedMessage = new ComponentBuilder("The configuration has been reloaded.")
             .color(ChatColor.GREEN).create();
-    private final BaseComponent[] usageMessage = new ComponentBuilder("=== wpSMP ===").color(ChatColor.GOLD)
-            .append("\n/wp-smp reload - Reloads the configuration file", ComponentBuilder.FormatRetention.NONE)
+    private final BaseComponent[] usageMessage = new ComponentBuilder("=== SMP Core ===").color(ChatColor.GOLD)
+            .append("\n/smp-core reload - Reloads the configuration file", ComponentBuilder.FormatRetention.NONE)
             .create();
 
-    public WPSMPCommand(WPSMP plugin) {
-        super(plugin, "wp-smp");
+    public SMPAdminCommand(SMPCore plugin) {
+        super(plugin, "smp-core");
     }
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if (!sender.hasPermission("wpsmp.command") && !sender.isOp()) {
+        if (!sender.hasPermission("smpcore.command") && !sender.isOp()) {
             sender.spigot().sendMessage(CommandErrors.LACKS_PERMISSIONS);
             return true;
         }

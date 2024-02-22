@@ -1,9 +1,9 @@
-package io.github.winnpixie.wpsmp.commands;
+package io.github.winnpixie.smp.commands;
 
 import io.github.winnpixie.hukkit.Hukkit;
 import io.github.winnpixie.hukkit.commands.BaseCommand;
 import io.github.winnpixie.hukkit.commands.CommandErrors;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.SMPCore;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import org.bukkit.command.Command;
@@ -11,8 +11,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-public class PingCommand extends BaseCommand<WPSMP> {
-    public PingCommand(WPSMP plugin) {
+public class PingCommand extends BaseCommand<SMPCore> {
+    public PingCommand(SMPCore plugin) {
         super(plugin, "ping");
     }
 

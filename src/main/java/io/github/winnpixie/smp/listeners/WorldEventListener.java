@@ -1,8 +1,8 @@
-package io.github.winnpixie.wpsmp.listeners;
+package io.github.winnpixie.smp.listeners;
 
 import io.github.winnpixie.hukkit.listeners.EventListener;
-import io.github.winnpixie.wpsmp.Config;
-import io.github.winnpixie.wpsmp.WPSMP;
+import io.github.winnpixie.smp.Config;
+import io.github.winnpixie.smp.SMPCore;
 import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -11,14 +11,14 @@ import org.bukkit.event.weather.LightningStrikeEvent;
 
 import java.util.Set;
 
-public class WorldEventListener extends EventListener<WPSMP> {
+public class WorldEventListener extends EventListener<SMPCore> {
     private final Set<Material> metallicSwords = Set.of(
             Material.GOLDEN_SWORD,
             Material.IRON_SWORD,
             Material.NETHERITE_SWORD // Netherite contains gold.
     );
 
-    public WorldEventListener(WPSMP plugin) {
+    public WorldEventListener(SMPCore plugin) {
         super(plugin);
 
         plugin.getServer().getScheduler().runTaskTimer(plugin, () -> {
