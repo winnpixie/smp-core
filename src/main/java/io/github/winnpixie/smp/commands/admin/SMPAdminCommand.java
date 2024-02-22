@@ -34,7 +34,7 @@ public class SMPAdminCommand extends BaseCommand<SMPCore> {
         }
 
         if (args.length < 1) {
-            sender.spigot().sendMessage(CommandErrors.MISSING_ARGUMENTS);
+            sender.spigot().sendMessage(usageMessage);
             return true;
         }
 
