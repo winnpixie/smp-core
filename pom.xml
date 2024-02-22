@@ -6,7 +6,7 @@
 
     <groupId>io.github.winnpixie</groupId>
     <artifactId>smp-core</artifactId>
-    <version>0.0.16</version>
+    <version>0.0.16.1</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

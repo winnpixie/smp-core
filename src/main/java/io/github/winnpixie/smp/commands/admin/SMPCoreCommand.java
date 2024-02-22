@@ -15,14 +15,15 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Collections;
 import java.util.List;
 
-public class SMPAdminCommand extends BaseCommand<SMPCore> {
+public class SMPCoreCommand extends BaseCommand<SMPCore> {
     private final BaseComponent[] reloadedMessage = new ComponentBuilder("The configuration has been reloaded.")
             .color(ChatColor.GREEN).create();
-    private final BaseComponent[] usageMessage = new ComponentBuilder("=== SMP Core ===").color(ChatColor.GOLD)
-            .append("\n/smp-core reload - Reloads the configuration file", ComponentBuilder.FormatRetention.NONE)
+    private final BaseComponent[] usageMessage = new ComponentBuilder("=== SMP Core ===")
+            .color(ChatColor.GOLD)
+            .append("\n/smp-core reload|rl - Reloads the configuration file", ComponentBuilder.FormatRetention.NONE)
             .create();
 
-    public SMPAdminCommand(SMPCore plugin) {
+    public SMPCoreCommand(SMPCore plugin) {
         super(plugin, "smp-core");
     }
 

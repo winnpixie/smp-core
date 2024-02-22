@@ -4,7 +4,7 @@ import io.github.winnpixie.hukkit.Hukkit;
 import io.github.winnpixie.hukkit.configs.AnnotatedConfigurationManager;
 import io.github.winnpixie.hukkit.configs.adapters.BukkitAdapter;
 import io.github.winnpixie.smp.commands.*;
-import io.github.winnpixie.smp.commands.admin.SMPAdminCommand;
+import io.github.winnpixie.smp.commands.admin.SMPCoreCommand;
 import io.github.winnpixie.smp.listeners.ConnectionListener;
 import io.github.winnpixie.smp.listeners.EntityActionListener;
 import io.github.winnpixie.smp.listeners.PlayerActionListener;
@@ -30,7 +30,7 @@ public class SMPCore extends JavaPlugin {
         Hukkit.addListener(new PlayerActionListener(this));
         Hukkit.addListener(new WorldEventListener(this));
 
-        Hukkit.addCommand(new SMPAdminCommand(this));
+        Hukkit.addCommand(new SMPCoreCommand(this));
         Hukkit.addCommand(new BottleExperienceCommand(this));
         Hukkit.addCommand(new HatCommand(this));
         Hukkit.addCommand(new PingCommand(this));
